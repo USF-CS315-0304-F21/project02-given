@@ -14,7 +14,7 @@ int init_array(int argc, char **argv, int *arr) {
 void print_array(char *prefix, int *arr, int len) {
     printf("%s", prefix);
     for (int i = 0; i < len; i++) {
-        printf("%d ", arr[i]);
+        printf(" %d", arr[i]);
     }
     printf("\n");
 }
@@ -30,12 +30,12 @@ int main(int argc, char **argv) {
 
     int len = init_array(argc, argv, arr);
     sort_c(arr, len);
-    print_array("C: ", arr, len);
+    print_array("C:", arr, len);
     
     /* TODO
     init_array(argc, argv, arr);
     sort_s(arr, len);
-    print_array("Asm: ", arr, len);
+    print_array("Asm:", arr, len);
     */
     return 0;
 }
